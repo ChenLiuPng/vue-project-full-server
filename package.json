@@ -19,15 +19,10 @@
     "egg-mock": "^3.21.0",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.0"
   },
   "engines": {
     "node": ">=10.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
   },
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-server",
@@ -39,7 +34,8 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "prepare": "husky install"
   },
   "ci": {
     "version": "10"
